@@ -47,7 +47,6 @@ public:
     static const char *ASECDIR;
 
     static const char *LOOPDIR;
-    static const char *EXT4_FUSE_DIR;
 
 protected:
     char *mLabel;
@@ -103,8 +102,6 @@ private:
     bool isMountpointMounted(const char *path);
     int mountAsecExternal();
     int doUnmount(const char *path, bool force);
-    int doMoveMount(const char *src, const char *dst, bool force);
-    int doFuseMount(const char *src, const char *dst);
     void protectFromAutorunStupidity();
 };
 
